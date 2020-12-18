@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dorker</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <style>
+      #log {
+        min-height: 42px;
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <form action="" name="generator" novalidate>
+      <div class="container">
+        <div class="row mt-4 mb-5">
+          <div class="col-8">
+            <div class="row">
+              <div class="col mb-1">
+                <h2>Operators:</h2>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="site" class="col-2 col-form-label">In Title</label>
+              <div class="col-10">
+                <div class="input-group">
+                  <span class="input-group-text">intitle:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="intitle"
+                    name="intitle"
+                  />
+                </div>
+                <small class="text-muted fw-light">
+                  Finds strings in the title of a page
+                </small>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="inurl" class="col-2 col-form-label">In URL</label>
+              <div class="col-10">
+                <div class="input-group">
+                  <span class="input-group-text">inurl:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inurl"
+                    name="inurl"
+                    placeholder="Examples: admin"
+                  />
+                </div>
+                <small class="text-muted fw-light">
+                  Finds strings in the URL of a page
+                </small>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="site" class="col-2 col-form-label">Domain</label>
+              <div class="col-10">
+                <div class="input-group">
+                  <span class="input-group-text">site:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="site"
+                    name="site"
+                    placeholder="Examples: domain.com, domain.*, *.com "
+                  />
+                </div>
+                <small class="text-muted fw-light">
+                  Restricts a search to a particular site or domain
+                </small>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="filetype" class="col-2 col-form-label">
+                Filetype
+              </label>
+              <div class="col-10">
+                <div class="input-group">
+                  <span class="input-group-text">filetype:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="filetype"
+                    name="filetype"
+                    placeholder="Examples: pdf, txt, inc"
+                  />
+                </div>
+                <small class="text-muted fw-light">
+                  Finds specific types of files based on file extension. Read
+                  more: <a href="https://filext.com">filext.com</a>
+                </small>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="textquery" class="col-2 col-form-label">
+                Text query
+              </label>
+              <div class="col-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="textquery"
+                  name="preset"
+                  placeholder="Examples: powered by, syntax error"
+                />
+                <small class="text-muted fw-light">Text to be on a page</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col mb-1">
+                <h2>Presets:</h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="preset"
+                    id="preset4"
+                    value="intitle:index.of name size"
+                  />
+                  <label class="form-check-label" for="preset4">
+                    Directory listing (Index of)
+                  </label>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="preset"
+                    id="preset1"
+                    value="filetype:(xlsx | xls | ods | csv | tsv)"
+                  />
+                  <label class="form-check-label" for="preset1">
+                    Spreadsheets: xlsx, xls, ods, csv, tsv
+                  </label>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="preset"
+                    id="preset2"
+                    value="filetype:docx | filetype:doc | filetype:odt | filetype:rtf | filetype:pdf | filetype:txt"
+                  />
+                  <label class="form-check-label" for="preset2">
+                    Text documents: docx, doc, odt, rtf, pdf, txt
+                  </label>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="preset"
+                    id="preset3"
+                    value="filetype:pptx | filetype:ppt | filetype:odp | filetype:pdf"
+                  />
+                  <label class="form-check-label" for="preset3">
+                    Slide presentations: pptx, ppt, odp, pdf
+                  </label>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="preset"
+                    id="preset5"
+                    value="inurl:database filetype:yml"
+                  />
+                  <label class="form-check-label" for="preset5">
+                    File database.yml
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="row">
+              <div class="col mb-1">
+                <h2>Dork:</h2>
+              </div>
+            </div>
+
+            <div
+              id="log"
+              class="mb-3 p-2 text-wrap bg-light font-monospace border border-secondary rounded"
+            ></div>
+
+            <div class="row mb-3">
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Generate
+                </button>
+              </div>
+              <div class="col-auto">
+                <button type="reset" class="btn btn-outline-secondary btn-lg">
+                  Reset Form
+                </button>
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col">
+                <a
+                  href=""
+                  id="google"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-success w-100 btn-lg disabled"
+                >
+                  Search This Dork in Google&nbsp;
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-box-arrow-up-right"
+                    viewBox="0 0 16 16"
+                    style="position: relative; top: -3px"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                Links: <br />
+                <a
+                  href="https://www.exploit-db.com/google-hacking-database"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Google Hacking Database (new tab)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      (function (window, document) {
+        const form = document.forms.namedItem("generator");
+        const log = document.querySelector("#log");
+        const googleBtn = document.querySelector("#google");
+
+        form.addEventListener(
+          "submit",
+          (event) => {
+            let data = new FormData(form);
+            let link = "https://www.google.ru/search?q=";
+            let output = "";
+            for (const entry of data.entries()) {
+              if (!!entry[1]) {
+                if (/^preset/g.test(entry[0])) {
+                  output += `${entry[1]} `;
+                } else {
+                  output += `${entry[0]}:${entry[1]} `;
+                }
+              }
+            }
+            log.innerText = output;
+            googleBtn.setAttribute("href", link + output);
+            googleBtn.classList.remove("disabled");
+
+            event.preventDefault();
+          },
+          false
+        );
+      })(window, document);
+    </script>
+  </body>
+</html>
