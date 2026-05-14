@@ -37,6 +37,44 @@
             </div>
 
             <div class="row mb-3">
+              <label for="site" class="col-2 col-form-label">Website</label>
+              <div class="col-10">
+                <div class="input-group">
+                  <span class="input-group-text">site:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="site"
+                    name="site"
+                    placeholder="Examples: *.domain.com -www; domain.*"
+                  />
+                </div>
+                <small class="text-muted fw-light">
+                  Restricts a search to a particular website
+                </small>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="site" class="col-2 col-form-label">In page</label>
+              <div class="col-10">
+                <div class="input-group">
+                  <span class="input-group-text">intext:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="intext"
+                    name="intext"
+                    placeholder='Examples: "recent cyber attacks"'
+                  />
+                </div>
+                <small class="text-muted fw-light">
+                  The text should be on page
+                </small>
+              </div>
+            </div>
+
+            <div class="row mb-3">
               <label for="site" class="col-2 col-form-label">In Title</label>
               <div class="col-10">
                 <div class="input-group">
@@ -73,24 +111,6 @@
               </div>
             </div>
 
-            <div class="row mb-3">
-              <label for="site" class="col-2 col-form-label">Domain</label>
-              <div class="col-10">
-                <div class="input-group">
-                  <span class="input-group-text">site:</span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="site"
-                    name="site"
-                    placeholder="Examples: *.domain.com -www; domain.*"
-                  />
-                </div>
-                <small class="text-muted fw-light">
-                  Restricts a search to a particular site or domain
-                </small>
-              </div>
-            </div>
 
             <div class="row mb-3">
               <label for="filetype" class="col-2 col-form-label">
@@ -213,10 +233,7 @@
               </div>
             </div>
 
-            <div
-              id="log"
-              class="mb-3 p-2 text-wrap bg-light font-monospace border border-secondary rounded"
-            ></div>
+            <div id="log" class="mb-3 p-2 text-wrap bg-light font-monospace border border-secondary rounded" ></div>
 
             <div class="row mb-3">
               <div class="col-auto">
@@ -230,52 +247,20 @@
                 </button>
               </div>
             </div>
+
             <div class="row mb-1">
               <div class="col">
-                <a
-                  href=""
-                  id="google"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="btn btn-success w-100 btn-lg disabled"
-                >
-                  Search in Google&nbsp;
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-box-arrow-up-right"
-                    viewBox="0 0 16 16"
-                    style="position: relative; top: -3px"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-                    />
-                  </svg>
-                </a>
+                <a href="" id="google" target="_blank" rel="noreferrer" class="btn btn-success w-100 btn-lg disabled">Search in Google</a>
               </div>
             </div>
+
             <div class="row mb-3">
               <div class="col">
                 <hr>
-                Links: <br />
-                <p><a
-                  href="https://www.exploit-db.com/google-hacking-database"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Google Hacking Database (new tab)
-                </a></p>
-                <p>
-                  <a href="https://github.com/yuraloginoff/dork-generator"
-                  target="_blank"
-                  >GitHub repo (new tab)</a></p>
+                <ul>Links:
+                  <li><a href="https://www.exploit-db.com/google-hacking-database" target="_blank" rel="noreferrer">Google Hacking Database</a></li>
+                  <li><a href="https://github.com/yuraloginoff/dork-generator" target="_blank">Source code</a></li>
+                </ul>
               </div>
             </div>
           </div>
